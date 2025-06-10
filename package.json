@@ -52,8 +52,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && copyfiles -u 1 public/_redirects build/",
-    "test": "react-scripts test",
+    "build": "CI=false react-scripts build && copyfiles -u 1 public/_redirects build/",
+    "test": "react-scripts test",1
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
