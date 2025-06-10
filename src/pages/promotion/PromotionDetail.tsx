@@ -1,50 +1,48 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { Footer } from "../../components/base";
-import { Header } from "../../components/base/Header";
-import "./PromotionDetail.scss";
+import React, { useEffect, useMemo, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Footer } from '../../components/base'
+import { FooterPromotion } from '../../components/base/FooterPromotion'
+import { Header } from '../../components/base/Header'
+import './PromotionDetail.scss'
 
 // 프로모션 상세 페이지
 const PromotionDetail = () => {
-  const [loaded, setLoaded] = useState(false);
-  const { id } = useParams();
+  const [loaded, setLoaded] = useState(false)
+  const { id } = useParams()
 
   useEffect(() => {
-    setLoaded(true);
-  }, []);
+    setLoaded(true)
+  }, [])
 
   useEffect(() => {
-    console.log(`프로모션 ID: ${id}`);
-  }, [id]);
+    console.log(`프로모션 ID: ${id}`)
+  }, [id])
 
   return !loaded ? (
     <></>
   ) : (
     <>
       <Header />
-      {id === "0" && <Promotion0 />}
-      {id === "1" && <Promotion1 />}
-      <Footer />
+      {id === '0' && <Promotion0 />}
+      {id === '1' && <Promotion1 />}
+      <FooterPromotion />
     </>
-  );
-};
+  )
+}
 
-export default PromotionDetail;
+export default PromotionDetail
 
 // 0번 프로모션 페이지 내용
 const Promotion0 = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  const queryParams = useMemo(
-    () => new URLSearchParams(location.search),
-    [location.search]
-  );
-  const isReceiver = queryParams.get("isReceiver") === "true";
+  const queryParams = useMemo(() => new URLSearchParams(location.search), [location.search])
+  const isReceiver = queryParams.get('isReceiver') === 'true'
   const LIST_ARRAY = [
     {
-      step: "STEP 1",
-      person: isReceiver ? "" : "추천인",
+      step: 'STEP 1',
+      person: isReceiver ? '' : '추천인',
       desc: isReceiver ? (
         <p className="font-extrabold text-base text-[#313131]">
           신청페이지 접속 후 원하는 타입 및 기간 선택
@@ -54,37 +52,29 @@ const Promotion0 = () => {
           친구에게 밸런스 스페이스 추천과 함께 이벤트 공유하기
         </p>
       ),
-      img: isReceiver
-        ? "/assets/promotion/list5.png"
-        : "/assets/promotion/list1.png",
+      img: isReceiver ? '/assets/promotion/list5.png' : '/assets/promotion/list1.png',
     },
     {
-      step: "STEP 2",
-      person: isReceiver ? "" : "친구",
+      step: 'STEP 2',
+      person: isReceiver ? '' : '친구',
       desc: isReceiver ? (
         <p className="font-extrabold text-base text-[#313131]">
           상담신청 &gt; 문의사항에
           <br />
-          <span className="text-[#5D73FF]">
-            [추천인 성함 / 추천인 번호]
-          </span>{" "}
-          기재하여 신청
+          <span className="text-[#5D73FF]">[추천인 성함 / 추천인 번호]</span> 기재하여 신청
         </p>
       ) : (
         <p className="font-extrabold text-base text-[#313131]">
           상담신청 &gt; 문의사항에
           <br />
-          <span className="text-[#5D73FF]">
-            [추천인 성함 / 추천인 번호]
-          </span>{" "}
-          기재하여 신청
+          <span className="text-[#5D73FF]">[추천인 성함 / 추천인 번호]</span> 기재하여 신청
         </p>
       ),
-      img: "/assets/promotion/list2.png",
+      img: '/assets/promotion/list2.png',
     },
     {
-      step: "STEP 3",
-      person: isReceiver ? "" : "친구",
+      step: 'STEP 3',
+      person: isReceiver ? '' : '친구',
       desc: isReceiver ? (
         <p className="font-extrabold text-base text-[#313131]">
           추천인 정보 확인 후<br />
@@ -100,11 +90,11 @@ const Promotion0 = () => {
           <span className="text-[#8b8b8b]">(전담 매니저 개별 연락)</span>
         </p>
       ),
-      img: "/assets/promotion/list3.png",
+      img: '/assets/promotion/list3.png',
     },
     {
-      step: "STEP 4",
-      person: isReceiver ? "" : "추천인&친구",
+      step: 'STEP 4',
+      person: isReceiver ? '' : '추천인&친구',
       desc: isReceiver ? (
         <p className="font-extrabold text-base text-[#313131]">
           계약 완료 후
@@ -118,42 +108,42 @@ const Promotion0 = () => {
           모바일 상품권 전달
         </p>
       ),
-      img: "/assets/promotion/list4.png",
+      img: '/assets/promotion/list4.png',
     },
-  ];
+  ]
   const handleShare = async () => {
     const url = (() => {
-      const url = new URL(window.location.href);
-      const params = new URLSearchParams(url.search);
+      const url = new URL(window.location.href)
+      const params = new URLSearchParams(url.search)
 
       // utm_source가 이미 있으면 덮어쓰기, 없으면 추가
-      params.set("utm_source", "promotion");
+      params.set('utm_source', 'promotion')
 
       // isReceiver가 이미 있어도 무조건 true로 설정
-      params.set("isReceiver", "true");
+      params.set('isReceiver', 'true')
 
-      return `${window.location.origin}${url.pathname}?${params.toString()}`;
-    })();
+      return `${window.location.origin}${url.pathname}?${params.toString()}`
+    })()
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "밸스 프로모션",
-          text: "밸스의 혜택을 친구와 함께!",
+          title: '밸스 프로모션',
+          text: '밸스의 혜택을 친구와 함께!',
           url,
-        });
+        })
       } catch (error) {
-        console.error("공유 실패:", error);
+        console.error('공유 실패:', error)
       }
     } else {
       try {
-        await navigator.clipboard.writeText(url);
-        alert("링크가 복사되었습니다.");
+        await navigator.clipboard.writeText(url)
+        alert('링크가 복사되었습니다.')
       } catch {
-        alert("링크 복사에 실패했습니다.");
+        alert('링크 복사에 실패했습니다.')
       }
     }
-  };
+  }
 
   return (
     <>
@@ -170,18 +160,18 @@ const Promotion0 = () => {
               <p className="mt-[48px] font-black text-[#fff] text-[26px] leading-[34px] 1200r:mt-[30px] 1200r:text-[20px] 1200r:leading-[30px]">
                 밸런스 스페이스 <span className="opacity-70">추천하고</span>
                 <br />
-                <span className="opacity-70">친구도 나도</span> 5만원 상품권{" "}
+                <span className="opacity-70">친구도 나도</span> 5만원 상품권{' '}
                 <span className="opacity-70">받아가세요!</span>
               </p>
             </div>
             <div className="right">
               <img
-                src={"/assets/promotion/hero.png"}
+                src={'/assets/promotion/hero.png'}
                 className="w-[481px] h-auto inline-block 1200r:hidden"
                 alt=""
               />
               <img
-                src={"/assets/promotion/hero-m.png"}
+                src={'/assets/promotion/hero-m.png'}
                 className="1200r:w-[290px] 1200r:h-auto hidden 1200r:inline-block"
                 alt=""
               />
@@ -206,7 +196,7 @@ const Promotion0 = () => {
                   alt="쿠폰 이미지"
                   className="w-full translate-y-12"
                 />
-                <div className="p-7 pt-[76px] bg-[#e1e8ff] w-full rounded-2xl h-[260px] 1200r:h-[230px]">
+                <div className="p-7 pt-[76px] bg-[#F1F6FF] w-full rounded-2xl h-[260px] 1200r:h-[230px]">
                   <h4 className="text-[#5D73FF] text-[22px] font-extrabold mb-[12px] 1200r:text-[18px] 1200r:leading-[28px] 1200r:mb-[8px]">
                     추천인 통해 계약 완료 시
                   </h4>
@@ -215,12 +205,10 @@ const Promotion0 = () => {
                     <br />+ 최대 3개월 추가 혜택
                   </p>
                   <p className="text-xs font-medium text-[#828282] flex flex-wrap items-center justify-center 1200r:text-[14px] 1200r:leading-[22px]">
-                    {["6,12개월 +1개월", "24개월 +2개월", "36개월 +3개월"].map(
+                    {['6,12개월 +1개월', '24개월 +2개월', '36개월 +3개월'].map(
                       (item, index, arr) => (
                         <React.Fragment key={index}>
-                          <span className="text-xs font-medium text-[#828282]">
-                            {item}
-                          </span>
+                          <span className="text-xs font-medium text-[#828282]">{item}</span>
                           {index !== arr.length - 1 && (
                             <span
                               className="w-px h-2 bg-[#B8B8B8] inline-block mx-2 align-middle"
@@ -245,7 +233,7 @@ const Promotion0 = () => {
                   alt="쿠폰 이미지"
                   className="w-full translate-y-12"
                 />
-                <div className="p-7 pt-[76px] bg-[#e1e8ff] w-full rounded-2xl h-[260px] 1200r:h-[230px]">
+                <div className="p-7 pt-[76px] bg-[#F1F6FF] w-full rounded-2xl h-[260px] 1200r:h-[230px]">
                   <h4 className="text-[#5D73FF] text-[22px] font-extrabold mb-[12px] 1200r:text-[18px] 1200r:leading-[28px] 1200r:mb-[8px]">
                     친구 계약 완료 시
                   </h4>
@@ -281,7 +269,7 @@ const Promotion0 = () => {
                   />
                   <div>
                     <h4 className="font-extrabold text-sm text-[#A9A9A9] mb-2 text-left px-[20px]">
-                      {step}{" "}
+                      {step}{' '}
                       <span className="text-[#5D73FF] font-extrabold text-sm text-left">
                         {person}
                       </span>
@@ -312,8 +300,8 @@ const Promotion0 = () => {
               <button
                 className="button-shadow bg-[#5D73FF] text-[#F9FAFB] font-bold px-[54px] py-[27px] rounded-full text-2xl 1200r:px-[40px] 1200r:py-[16px] 1200r:text-base"
                 onClick={() => {
-                  const search = location.search;
-                  navigate(`/consult2${search}`);
+                  const search = location.search
+                  navigate(`/consult2${search}`)
                 }}
               >
                 5만원 상품권 + 추가 기간 혜택 받기 🎁
@@ -329,39 +317,36 @@ const Promotion0 = () => {
           </div>
         </section>
 
-        <section className="bg-[#F5F7FF] py-[60px] text-xs text-[#828282] flex flex-col items-center 1200r:py-[40px] 1200r:text-[12px] 1200r:leading-5 1200r:px-5">
+        <section className="bg-[#F5F7FF] py-[60px] text-xs text-[#828282] flex flex-col items-center 1200r:py-[40px] 1200r:text-[12px] 1200r:leading-5 1200r:px-5 border-b border-[#E6E6E6]">
           <div className="inner-width">
             <h3 className="text-xl text-[#313131] font-extrabold mb-[16px] text-left 1200r:text-[14px] 1200r:leading-[26px] 1200r:mb-[12px]">
               유의사항
             </h3>
             <ul className="list-disc list-inside space-y-2 text-left pl-[20px]">
               <li className="list-disc ">
-                본 프로모션은 밸런스 스페이스와 현재 계약 중이거나, 과거 계약
-                이력이 있는 고객만 추천인으로 참여하실 수 있습니다.
+                본 프로모션은 밸런스 스페이스와 현재 계약 중이거나, 과거 계약 이력이 있는 고객만
+                추천인으로 참여하실 수 있습니다.
               </li>
               <li className="list-disc ">
-                추천한 친구가 계약을 완료할 때마다 횟수 제한 없이 상품권을
-                지급받을 수 있습니다.
+                추천한 친구가 계약을 완료할 때마다 횟수 제한 없이 상품권을 지급받을 수 있습니다.
               </li>
               <li className="list-disc ">
-                본 프로모션은 다른 이벤트 또는 할인 혜택과 중복 적용이 제한될 수
-                있습니다.
+                본 프로모션은 다른 이벤트 또는 할인 혜택과 중복 적용이 제한될 수 있습니다.
               </li>
               <li className="list-disc ">
-                지급되는 상품권은 계약 완료 후 일정 기간 내 발송되며, 사정에
-                따라 발송 시점이 조정될 수 있습니다.
-              </li>
-              <li className="list-disc ">
-                본 프로모션은 당사 사정에 따라 사전 공지 없이 변경되거나 종료될
+                지급되는 상품권은 계약 완료 후 일정 기간 내 발송되며, 사정에 따라 발송 시점이 조정될
                 수 있습니다.
+              </li>
+              <li className="list-disc ">
+                본 프로모션은 당사 사정에 따라 사전 공지 없이 변경되거나 종료될 수 있습니다.
               </li>
             </ul>
           </div>
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 // 1번 프로모션 페이지 내용 (추후 생길 경우 추가)
 const Promotion1 = () => {
@@ -369,5 +354,5 @@ const Promotion1 = () => {
     <>
       <div>1번 프로모션 내용</div>
     </>
-  );
-};
+  )
+}

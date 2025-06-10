@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { Footer } from '../../components/base'
+import { FooterPromotion } from '../../components/base/FooterPromotion'
 import { Header } from '../../components/base/Header'
 import './Promotion.scss'
 
@@ -70,7 +71,7 @@ const Promotion = () => {
           {promotions.map((promo, i) => (
             <div
               key={i}
-              className="cursor-pointer rounded-xl overflow-hidden shadow-sm transition-transform hover:scale-[1.02]"
+              className="cursor-pointer rounded-xl overflow-hidden transition-transform hover:scale-[1.02]"
               onClick={() => navigate(promo.link)}
             >
               <img src={promo.img} alt={promo.title} className="w-full object-cover" />
@@ -99,7 +100,7 @@ const Promotion = () => {
           ))}
         </section>
       </div>
-      <Footer />
+      <FooterPromotion />
     </>
   )
 }
