@@ -1,0 +1,35 @@
+.benefit .section-inner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-bottom: 0;
+
+  @media (max-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.benefit .section-header-top svg {
+  width: 34px;
+  height: 34px;
+
+  @media (max-width: 1200px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.benefit .section-inner:nth-of-type(2) .section-header-top svg path {
+  stroke: #f4db92;
+}
+
+.benefit .section-inner:nth-of-type(3) .section-header-top svg path {
+  stroke: #b0e2e2;
+}
+
+.benefit .section-inner .section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

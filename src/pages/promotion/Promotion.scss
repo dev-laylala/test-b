@@ -1,0 +1,28 @@
+@import "pretendard/dist/web/static/pretendard.css";
+
+.promotion-container {
+  * {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", sans-serif !important;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .inner-width {
+    width: 100%;
+    max-width: 1080px;
+  }
+  .hero-section {
+    background-image: linear-gradient(#FFFFFF, #F5F4F7);
+  }
+}
+
+.list-shadow {
+  filter: drop-shadow(0px 8px 20px #00000008);
+}
+.list-icon {
+}
+.button-shadow {
+  filter: drop-shadow(0px 12px 40px #dbdbd8);
+}

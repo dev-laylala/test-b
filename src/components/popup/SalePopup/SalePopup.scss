@@ -1,0 +1,118 @@
+.sale-popup-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 35, 41, 0.55);
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .sale-popup {
+    position: relative;
+    width: 400px;
+    height: 510px;
+
+    @media (max-width: 1200px) {
+      width: 360px;
+      height: 510px;
+    }
+
+    .request-consult {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bottom-area {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+
+      .close {
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: #0051c2;
+      }
+
+      .close-today {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        color: #89919c;
+        padding-left: 20px;
+
+        &.active {
+          &::before {
+            background: url(/static/chk-selected.svg) center no-repeat;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -10px;
+          top: -5px;
+          width: 24px;
+          height: 24px;
+          background: url(/static/chk.svg) center no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.popup-img {
+  border-radius: 20px;
+}
+
+.bottom-area {
+  background: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.request-consult-btn-m {
+  width: 293px;
+  height: 40px;
+  border-radius: 10px;
+  background: #170c98;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Pretendard, sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.request-consult-btn-pc {
+  width: 298px;
+  height: 44px;
+  border-radius: 10px;
+  background: #170c98;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Pretendard, sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

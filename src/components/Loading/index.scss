@@ -1,0 +1,54 @@
+.g-alert {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00000055;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 192px;
+    height: 192px;
+  }
+
+  .alert-title {
+    padding: 4px 8px 0px 8px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Pretendard, sans-serif;
+    line-height: 1.56;
+    color: #363d47;
+  }
+
+  .alert-content {
+    margin-top: 16px;
+    color: #5b6675;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: #f5f6f9;
+    margin-top: 28px;
+    margin-bottom: 20px;
+  }
+
+  button.confirm {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Pretendard, sans-serif;
+    color: #006aff;
+    width: 100%;
+  }
+}

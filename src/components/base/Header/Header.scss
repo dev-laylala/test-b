@@ -1,0 +1,147 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eff0f2;
+  z-index: 10;
+  background: #fff;
+  height: 68px;
+  transition: all ease 0.2s;
+  transition-delay: 0.2s;
+  position: fixed;
+}
+
+.header.collapse_ {
+  transform: translateY(-80px);
+}
+
+.header .gnb {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  margin-right: 90px;
+  width: 188px;
+}
+
+.header .nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nav ul {
+  display: flex;
+  // gap: 60px;
+  // gap: 44px;
+  gap: 40px;
+}
+
+.header .nav li {
+  font-size: 16px;
+  font-weight: 500;
+  // padding: 10px 16px;
+  border-radius: 10px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .nav li:nth-child(1) {
+  width: 146px;
+}
+.header .nav li:nth-child(2) {
+  width: 96px;
+}
+
+.header .nav li:hover {
+  background: #f3f5f9;
+}
+
+.header .nav .dropdown {
+  position: relative;
+}
+
+.header .nav .dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.header .nav .dropdown-list {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  transition: all 0.2s;
+
+  .space {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+  }
+}
+
+.header .nav .dropdown-list ul {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #787b83;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+  padding: 14px 20px;
+}
+
+.header .nav .dropdown-list ul span {
+  cursor: pointer;
+}
+
+.header .collapsible input {
+  display: none;
+}
+
+.header .collapsible .collapsible-content {
+  display: flex;
+  width: 100%;
+  opacity: 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .collapsible input:checked ~ .collapsible-content {
+  opacity: 1;
+}
+
+.header .nav a.filled {
+  // padding: 0 20px;
+  width: 121px;
+  height: 40px;
+
+  line-height: 40px;
+
+  background: #5d73ff;
+  border-radius: 31px;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all ease-in 0.2s;
+}
+
+.header .nav a.filled:hover {
+  // opacity: 0.7;
+  background: linear-gradient(90deg, #5e6eff 0%, #4bcdff 105.41%);
+}

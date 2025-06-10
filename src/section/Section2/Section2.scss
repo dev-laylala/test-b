@@ -1,0 +1,366 @@
+.MuiMasonry-root {
+  margin: 0 !important;
+}
+
+#section2 .section-inner {
+  margin: 0 auto;
+  padding: 150px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 0px;
+  }
+}
+
+#section2 .section-inner .title {
+  position: sticky;
+  top: 110px;
+  height: 200px;
+  text-align: left;
+  color: #aeb2b8;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: -0.88px;
+  font-weight: 700;
+
+  @media (max-width: 1200px) {
+    position: static;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.8px;
+    height: auto;
+  }
+}
+
+#section2 .section-inner .title strong {
+  color: #454f5d;
+}
+
+#section2 .masonry-container {
+  display: flex;
+  gap: 20px;
+  @media (max-width: 1200px) {
+    gap: 12px;
+  }
+}
+#section2 .masonry-column {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1200px) {
+    width: 134px;
+  }
+}
+#section2 .masonry-column.column-left {
+  gap: 32px;
+  @media (max-width: 1200px) {
+    gap: 14px;
+  }
+}
+#section2 .masonry-column.column-right {
+  gap: 24px;
+  padding-top: 86px;
+  @media (max-width: 1200px) {
+    gap: 14px; 
+    padding-top: 46px;
+  }
+}
+#section2 .masonry-item {
+  border-radius: 30px;
+  height: 300px;
+  background-color: #F5F5F7;
+  padding: 30px 26px;
+  color: #82858d;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    padding: 22px 12px;
+    border-radius: 19px;
+    height: 184px;
+  }
+}
+#section2 .masonry-item strong {
+  font-weight: 500;
+  color: #292d32;
+}
+#section2 .masonry-item .item-header {
+  display: flex;
+  margin-bottom: 10px;
+  @media (max-width: 1200px) {
+    margin-bottom: 5px; 
+  }
+}
+#section2 .masonry-item .item-header .masonry-profile-img {
+  opacity: 0.1;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  @media (max-width: 1200px) {
+    display: none; 
+  }
+}
+#section2 .masonry-item .item-header .item-header-text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 22px; 
+  }
+}
+#section2 .masonry-item .item-body {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 24px;
+    word-break: break-all;
+    letter-spacing: -0.88px;
+  }
+}
+
+#section2 .masonry-item.item-dark {
+  background-color: #29292E;
+  color: white;
+  height: 140px;
+  padding: 24px;
+  @media (max-width: 1200px) {
+    padding: 14px 12px;
+    height: 88px;
+  }
+}
+#section2 .masonry-item.item-dark .item-header .item-header-text {
+  font-weight: 500;
+  @media (max-width: 1200px) {
+    font-size: 16px; 
+  }
+}
+#section2 .masonry-item .bottom-percentage-number {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(0deg, #5e6eff, #4bcdff);
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  font-size: 37px;
+  line-height: 46px;
+  font-weight: 700;
+  @media (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 30px;
+    right: 12px;
+    bottom: 10px;
+  }
+}
+
+#section2 .masonry-item .bottom-icon {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  object-fit: none;
+  @media (max-width: 1200px) {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+  }
+}
+#section2 .masonry-item .bottom-icon.icon-money-bag {
+  bottom: 24px;
+  right: 24px;
+  @media (max-width: 1200px) {
+    bottom: 14px;
+    right: 8px;
+  }
+}
+#section2 .masonry-item .bottom-icon.icon-thumb {
+  bottom: 24px;
+  right: 23px;
+  @media (max-width: 1200px) {
+    bottom: 14px;
+    right: 8px; 
+  }
+}
+#section2 .masonry-item .bottom-icon.icon-thunder {
+  bottom: 24px;
+  right: 27px;
+  @media (max-width: 1200px) {
+    bottom: 14px;
+    right: 8px; 
+  }
+}
+
+// #section2 .masonry {
+//   width: 530px;
+
+//   @media (max-width: 1200px) {
+//     width: calc(100% + 16px);
+//     margin-left: -8px;
+//     margin-right: -8px;
+//   }
+// }
+
+// // Card Light
+// #section2 .card {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+//   text-align: left;
+//   font-size: 20px;
+//   font-weight: 500;
+//   border-radius: 30px;
+//   width: 255px;
+//   padding: 25px;
+//   position: relative;
+//   height: 300px;
+//   background: #f5f5f7;
+//   color: #82858d;
+//   margin: 10px;
+
+//   @media (max-width: 1200px) {
+//     height: 184px;
+//     margin: 6px;
+//     border-radius: 15px;
+//     font-size: 16px;
+//     line-height: 24px;
+//     letter-spacing: -0.47px;
+//     padding: 22px 12px;
+//     padding-bottom: 19px;
+//     gap: 0;
+//   }
+
+//   strong {
+//     font-weight: 500;
+//   }
+// }
+
+// // Card Dark
+// #section2 .card.dark {
+//   height: 140px;
+//   background: #29292e;
+//   color: #fff;
+
+//   @media (max-width: 1200px) {
+//     font-size: 16px;
+//     height: 88px;
+//     padding: 12px 14px;
+//   }
+// }
+
+// #section2 .card.dark h3 {
+//   font-size: 20px;
+//   font-weight: 500;
+
+//   @media (max-width: 1200px) {
+//     font-size: 16px;
+//     line-height: 30px;
+//     letter-spacing: -0.47px;
+//   }
+// }
+
+// #section2 .card.dark .bottom-gradient {
+//   background-image: -webkit-linear-gradient(0deg, #5e6eff, #4bcdff);
+//   position: absolute;
+//   bottom: 25px;
+//   right: 25px;
+//   font-size: 37px;
+//   font-weight: 700;
+
+//   @media (max-width: 1200px) {
+//     bottom: 12px;
+//     right: 17px;
+//     font-size: 24px;
+//     line-height: 31px;
+//   }
+// }
+
+// // Card Blank
+// #section2 .card.blank {
+//   height: 60px;
+//   background: transparent;
+
+//   @media (max-width: 1200px) {
+//     height: 40px;
+//   }
+// }
+
+// // Card Header
+// #section2 .card .card-header {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+
+//   @media (max-width: 1200px) {
+//     font-size: 15px;
+//     margin-bottom: 5px;
+//     gap: 5px;
+//   }
+
+//   strong {
+//     color: #292d32;
+//   }
+// }
+
+// #section2 .card .card-header .profile-icon {
+//   width: 30px;
+//   height: 30px;
+//   opacity: 0.1;
+
+//   @media (max-width: 1200px) {
+//     display: none;
+//   }
+// }
+
+// // Card Content
+// #section2 .card .card-content {
+//   font-size: 20px;
+//   line-height: 30px;
+//   font-weight: 400;
+//   letter-spacing: -0.5px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   flex-grow: 1;
+
+//   @media (max-width: 1200px) {
+//     font-size: 15px;
+//     line-height: 24px;
+//     letter-spacing: -0.8px;
+//   }
+
+//   p {
+//     word-break: break-all;
+//   }
+// }
+
+// #section2 .card .card-content strong {
+//   color: #454f5d;
+// }
+
+// #section2 .card .bottom-icon {
+//   text-align: right;
+//   font-size: 48px;
+
+//   @media (max-width: 1200px) {
+//     font-size: 33px;
+//   }
+// }
+
+// #section2 .card .bottom-icon img {
+//   width: 56px;
+
+//   @media (max-width: 1200px) {
+//     width: 36px;
+//   }
+// }
+
+// #section2 .card h3 {
+//   font-size: 24px;
+//   font-weight: 700;
+// }

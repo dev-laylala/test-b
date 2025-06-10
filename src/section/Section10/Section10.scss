@@ -1,0 +1,66 @@
+.section10 {
+  background: linear-gradient(90deg, #5e6eff 0%, #4bcdff 105.41%);
+}
+
+.section10 .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 0;
+
+  @media (max-width: 1080px) {
+    height: 240px;
+    gap: 30px;
+  }
+}
+
+.section10 .title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+
+  @media (max-width: 1200px) {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+.section10 .button-group {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    gap: 10px;
+  }
+}
+
+.section10 button {
+  flex: 1;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  padding: 16px 46px;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    padding: 14px 20px;
+    width: 138px;
+  }
+}
+
+.section10 button.filled {
+  background: #fff;
+  color: #5795ff;
+}
+
+.section10 button.hover {
+  transition: all 0.2s;
+  &:hover {
+    background: #1f82e8;
+  }
+}

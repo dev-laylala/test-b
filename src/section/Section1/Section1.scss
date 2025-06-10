@@ -1,0 +1,120 @@
+#section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 68px;
+
+  @media (max-width: 1200px) {
+    margin-top: 56px;
+    padding-top: 0;
+  }
+}
+
+#section1 .section-inner {
+  padding-top: 158.76px;
+  padding-bottom: 0;
+
+  @media (max-width: 1200px) {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
+
+#section1 .title {
+  display: block;
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-size: 64px;
+  background-image: -webkit-linear-gradient(0deg, #5e6eff, #4bcdff);
+  line-height: 84px;
+  margin: 0;
+}
+
+#section1 .sub {
+  color: #686d79;
+  font-size: 31.39px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48.206px;
+  letter-spacing: -0.981px;
+  margin-bottom: 24px;
+
+  & > span {
+    color: #5D73FF;
+  }
+}
+
+#section1 button {
+  margin-top: 69px;
+
+  background: linear-gradient(90deg, #5e6eff 100%, #4bcdff 0%);
+  color: #fff;
+  width: 246px;
+  height: 84px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: linear-gradient(90deg, #5e6eff 0%, #4bcdff 105.41%);
+    box-shadow: 8px 8px 117px 0.5px #e0dfe5;
+  }
+
+  @media (max-width: 1200px) {
+    width: 212px;
+    height: 55px;
+    font-size: 18px;
+    margin-top: 26px;
+  }
+}
+
+#section1 .main-image {
+  width: calc(100% - 40px);
+  max-width: 1080px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 107px;
+  border-radius: 30px;
+  background-image: url("../../static/sample.png");
+  background-position: center center;
+  background-size: cover;
+
+  @media (max-width: 1200px) {
+    margin-top: 48px;
+  }
+
+  @media (max-width: 767px) {
+    height: 375px;
+  }
+
+  @media (max-width: 375px) {
+    height: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #section1 .title {
+
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 41.714px;
+  }
+
+  #section1 .sub {
+    color: #686D79;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+
+    margin-top: 32px;
+  }
+
+}

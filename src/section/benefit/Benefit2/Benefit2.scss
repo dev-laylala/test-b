@@ -1,0 +1,136 @@
+#benefit2 .section-content {
+  @media (max-width: 1200px) {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-bottom: 100px;
+  }
+}
+
+#benefit .section .section-header .section-header-sub {
+  word-break: one;
+}
+
+#benefit2 .section-header {
+  width: auto;
+  height: auto;
+  margin-bottom: 60px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 32px;
+  }
+}
+
+#benefit2 .section-header-top svg path {
+  stroke: #f4db92;
+}
+
+#benefit2 .row {
+  display: flex;
+  gap: 20px;
+}
+
+#benefit2 .col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 660px;
+
+  &:nth-of-type(1) {
+    width: 392px;
+  }
+
+  &:nth-of-type(2) {
+    flex: 1;
+  }
+}
+
+#benefit2 .col:first-child .card {
+  height: 100%;
+}
+
+#benefit2 .col:nth-of-type(2) .card {
+  flex: 1;
+}
+
+#benefit2 .slick-dots {
+  bottom: -40px;
+}
+
+#benefit2 .slick-dots li:nth-of-type(1).slick-active button::before {
+  color: #61bef5;
+}
+
+#benefit2 .slick-dots li:nth-of-type(2).slick-active button::before {
+  color: #fccf4e;
+}
+
+#benefit2 .slick-dots li:nth-of-type(3).slick-active button::before {
+  color: #b2d270;
+}
+
+#benefit2 .card {
+  width: 100%;
+  border-radius: 30px;
+  background: #f5f5f7;
+  padding: 30px;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    width: auto;
+    height: 310px !important;
+    margin: 0 10px;
+    padding: 26px;
+  }
+}
+
+#benefit2 .card .card-header {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.88px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #838a9a;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+#benefit2 .card .card-content p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.88px;
+  font-weight: 400;
+  color: #8b939f;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+#benefit2 .card .card-content span {
+  display: inline-block;
+  border-radius: 28px;
+  color: #fff;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.62px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+#benefit2 .swiper-pagination {
+  bottom: -44px !important;
+}
+
+#benefit2 .swiper-pagination-bullet-active {
+  background: #61bef5;
+}

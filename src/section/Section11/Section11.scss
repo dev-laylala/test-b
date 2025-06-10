@@ -1,0 +1,25 @@
+#section11 .section-inner {
+  padding: 150px 0 120px;
+  @media (max-width: 1200px) {
+    padding: 44px 0 56px; 
+  }
+}
+
+#section11 .section-header {
+  height: auto;
+  margin-bottom: 60px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 32px;
+  }
+}
+
+#section11 .section-content {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

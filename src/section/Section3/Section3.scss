@@ -1,0 +1,385 @@
+#section3 {
+  background: #fef7e3;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 128px;
+  padding-bottom: 147px;
+  position: relative;
+  @media (max-width: 1200px) {
+    display: block;
+    height: auto;
+  }
+}
+
+#section3 .section-inner {
+  position: sticky;
+  top: 128px;
+  padding: 0;
+  @media (max-width: 1200px) {
+    padding: 54px 0;
+    top: 54px;
+  }
+}
+
+#section3.active {
+  background: #e4f2f2;
+}
+
+#section3 .section-header {
+  text-align: center;
+}
+
+#section3 .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 42px;
+
+  @media (max-width: 1200px) {
+    gap: 18px;
+  }
+}
+
+#section3 .link-group {
+  display: flex;
+  align-items: center;
+  gap: 85px;
+  margin-bottom: 20px;
+
+  @media (max-width: 1200px) {
+    gap: 65px;
+    margin-bottom: 12px;
+  }
+}
+
+#section3 .link {
+  cursor: pointer;
+  color: #454f5d;
+  font-size: 22px;
+  font-weight: 700;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.88px;
+  }
+}
+
+#section3 .link.active {
+  color: #ffc10d;
+  border-bottom: 2px solid #ffc10d;
+}
+
+#section3.active .link.active {
+  color: #25bbbb;
+  border-bottom: 2px solid #25bbbb;
+}
+
+#section3 .card {
+  display: flex;
+  align-items: center;
+  padding: 20px 18px 20px 18px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+  height: 80px;
+  width: 805px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #838a9a;
+  font-weight: 400;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    height: auto;
+    padding: 19px 19px 22px;
+    gap: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    
+  }
+  &:nth-child(4){
+    @media (max-width: 1200px) {
+      padding: 18px 19px 25px 18px;
+    }
+  }
+  .swiper{
+    @media(max-width: 1200px){
+      height: 124px;
+    }
+    height: 34px;
+    overflow-y: hidden;
+  }
+    .swiper-slide {
+      justify-content: flex-start;
+      @media(max-width: 1200px){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+}
+
+#section3 .card .card-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#section3 .card strong {
+  color: #454f5d;
+  font-weight: 700;
+  margin-right: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    margin-right: 0;
+  }
+}
+#section3 .card:last-child strong {
+  margin-right: 20px;
+}
+
+
+#section3{
+  .card{
+      .card-right{
+        .content{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 610px;
+
+          @media (max-width: 1200px) {
+           flex-direction: column;
+           align-items: flex-start;
+            width: unset;
+          }
+          p {
+            font-size: 18px;
+            line-height: 25px;
+            color: #838A9A;
+            letter-spacing: -0.6px;
+            @media (max-width: 1200px) {
+              text-align: left;
+              font-size: 15px; 
+              line-height: 24px;
+            }
+          }
+          .gangnam-wrapper{
+              // margin-left: 124px;
+
+              @media (max-width: 1200px) {
+                margin-left: 61px;
+                margin-top: 16px;
+              }
+              .gangnam-feature1{
+                margin-right: 10px;
+                color: #fff;
+                background: #29292E;  
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 25px;
+                letter-spacing: -0.622144px;
+                padding: 4px 10px;
+                @media (max-width: 1200px) {
+                  letter-spacing: -0.6px;
+                  color: #FFFFFF;
+                }
+              }
+              .gangnam-feature2{
+                color: #fff;
+                background: #29292E;
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 25px;
+                letter-spacing: -0.622144px;
+                padding: 4px 10px;
+                @media (max-width: 1200px) {
+                      letter-spacing: -0.6px;
+                }
+            }
+          }
+        }
+        .content{
+          .yeongdeungpo-wrapper{
+            // margin-left: 97px;
+            @media (max-width: 1200px) {
+              margin-left: 61px;
+              margin-top: 16px;
+            }
+            .yeongdeungpo-feature1{
+              margin-right: 10px;
+              color: #fff;
+              background: #29292E;
+              border-radius: 50px;
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 25px;
+              letter-spacing: -0.6px;
+              padding: 4px 10px;
+              @media (max-width: 1200px) {
+                letter-spacing: -0.6px;
+                color: #FFFFFF;
+              }
+            }
+            .yeongdeungpo-feature2{
+              color: #fff;
+              background: #29292E;
+              border-radius: 50px;
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 25px;
+              letter-spacing: -0.6px;
+              padding: 4px 10px;
+              @media (max-width: 1200px) {
+                    letter-spacing: -0.6px;
+              }
+            }
+          }
+        }
+        .content{
+          .yongin-wrapper{
+            // margin-left: 70px;
+            @media (max-width: 1200px) {
+              margin: 0;
+              margin-top: 11px;
+            }
+            .yongin-feature1{
+              margin-right: 10px;
+              color: #fff;
+              background: #5D75FF;
+              border-radius: 50px;
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 25px;
+              letter-spacing: -0.6px;
+              padding: 4px 10px;
+              @media (max-width: 1200px) {
+                letter-spacing: -0.6px;
+                color: #FFFFFF;
+              }
+            }
+            .yongin-feature2{
+              color: #fff;
+              background: #5D75FF;
+              border-radius: 50px;
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 25px;
+              letter-spacing: -0.6px;
+              padding: 4px 10px;
+              @media (max-width: 1200px) {
+                    letter-spacing: -0.6px;
+              } 
+            }
+          }
+        }
+      }
+    }
+}
+
+#section3 .square-wrapper {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    gap: 12px;
+  }
+}
+
+#section3 .square {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 255px;
+  height: 250px;
+  padding: 27px 25px;
+  color: #9ed6d6;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.88px;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0px 0px 30px #c9d8d8;
+    transform: translateY(-10px);
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+#section3 .square .square-text {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 700;
+  width: 90%;
+
+  @media (max-width: 1200px) {
+    width: 70%;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  strong {
+    color: #25bbbb;
+  }
+}
+
+#section3 .square .square-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#section3 .square .square-icon svg {
+  width: 56px;
+  height: 56px;
+
+  @media (max-width: 1200px) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #section3 {
+    padding: 0;
+  }
+
+  #section3 .section-inner .sub {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  #section3 .square-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+

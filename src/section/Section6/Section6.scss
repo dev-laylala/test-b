@@ -1,0 +1,44 @@
+#section6 {
+  background: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#section6 .effect {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background: #fff;
+  transform: translate3d(-100%, 0px, 0px);
+  transition: all ease 0.2s;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+#section6 .effect:nth-of-type(2) {
+  right: 0;
+  transform: translate3d(100%, 0px, 0px);
+}
+
+#section6 .section-inner {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  padding: 95px 0;
+
+  @media (max-width: 1200px) {
+    // padding: 50px 0px;
+    padding: 50px 0 52px;
+    text-align: left;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: -0.8px;
+  }
+}
+
+#section6 .section-inner .gradient-text {
+  background-image: -webkit-linear-gradient(0deg, #8139f5, #ff8383);
+}

@@ -1,0 +1,131 @@
+#benefit2 .card {
+  width: 100%;
+  border-radius: 30px;
+  background: #f5f5f7;
+  padding: 46px 35px;
+  text-align: left;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    width: 280px;
+    height: 310px !important;
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 20px;
+    justify-content: flex-start;
+  }
+}
+
+#benefit2 .card .card-header {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.88px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #838a9a;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+#benefit2 .card .card-content {
+  @media (max-width: 1200px) {
+    width: 100% !important;
+  }
+}
+
+#benefit2 .card#type-b .card-content {
+  width: 50%;
+}
+
+#benefit2 .card#type-c .card-content {
+  width: 50%;
+}
+
+#benefit2 .card .card-content p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.88px;
+  font-weight: 400;
+  color: #8b939f;
+
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+#benefit2 .card .card-content span {
+  display: inline-block;
+  // padding: 4px 12px;
+  border-radius: 28px;
+  color: #fff;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  // line-height: 24px;
+  letter-spacing: -0.62px;
+  width: 103px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 9px;
+    font-size: 16px;
+    // line-height: 22px;
+  }
+}
+
+#benefit2 .card .row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 11px;
+    flex-grow: 1;
+  }
+}
+
+#benefit2 .card#type-a img {
+  width: 142px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 1200px) {
+    width: 135px;
+    right: 26px;
+    bottom: 33px;
+  }
+}
+
+#benefit2 .card#type-b img {
+  width: 158px;
+
+  @media (max-width: 1200px) {
+    width: 136px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+  }
+}
+
+#benefit2 .card#type-c svg {
+  width: 192px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}

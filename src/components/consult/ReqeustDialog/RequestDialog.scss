@@ -1,0 +1,334 @@
+.dialog-inner {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.dialog-content {
+  position: relative;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+
+    &.next {
+      height: 100vh;
+      display: flex;
+    }
+  }
+}
+
+.request-card {
+  width: 426px;
+  background: #fff;
+  position: relative;
+  text-align: left;
+  padding: 43px 28px 37px 28px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 30px 0px;
+    padding-top: 50px;
+  }
+}
+
+.dialog-inner .close-button {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all ease 0.2s;
+  z-index: 99;
+
+  &:hover {
+    background-color: rgba(69, 79, 93, 0.1);
+
+    svg rect {
+      fill: #454f5d;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    top: 14px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.dialog-inner .close-button svg {
+  @media (max-width: 1200px) {
+    height: 14px;
+  }
+}
+
+.request-card .card-title {
+  color: #454f5d;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: -0.88px;
+  font-weight: 700;
+
+  @media (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.request-card .input-wrapper {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+.request-card .input-wrapper .input,
+.request-card .input-wrapper textarea {
+  width: 100%;
+  background: #eff2f5;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    padding: 13px 14px;
+  }
+}
+
+.request-card .input-wrapper .input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request-card .input-wrapper .input input,
+textarea {
+  color: #454f5d;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.request-card .input-wrapper .input .error {
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #ff6363;
+  margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    position: absolute;
+    right: 14px;
+  }
+}
+
+.request-card .input-wrapper textarea {
+  resize: none;
+}
+
+.request-card .input-wrapper .check-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 0;
+
+  @media (max-width: 1200px) {
+    padding: 10px 0;
+  }
+}
+
+.request-card .input-wrapper .check-input a {
+  text-align: left;
+  color: #9198a4;
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.request-card .input-wrapper .check-input a .underline {
+  text-decoration: none;
+
+  @media (max-width: 1200px) {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}
+
+.request-card .input-wrapper .check-input a:hover .underline {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.request-card .check-input input#cb {
+  display: none;
+}
+
+.request-card .check-input label.checkbox {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-block;
+  border: none;
+  background: #eff2f5;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.request-card .check-input input#cb:checked ~ label.checkbox {
+  background-color: #5d75ff;
+  background-image: url("../../../static/check-icon.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.request-card .check-input p {
+  display: inline-block;
+  font-size: 16px;
+  color: #9198a4;
+  margin-top: 0;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.request-card p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #686d79;
+  margin-top: 18px;
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin-top: 14px;
+  }
+}
+
+.request-card .box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #eff2ff;
+  border-radius: 15px;
+  color: #5b7cff;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  margin-top: 24px;
+  padding: 0 24px;
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    height: auto;
+    padding: 12px 0px;
+  }
+}
+
+.request-card .box strong {
+  font-weight: 700;
+  margin-right: 5px;
+
+  @media (max-width: 1200px) {
+    font-weight: 500;
+  }
+}
+
+.request-card .go-main {
+  width: 200px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  border: 2px solid #e5e9ef;
+  font-size: 18px;
+  font-weight: 700;
+  color: #454f5d;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.request-card input[type="submit"] {
+  background: linear-gradient(90deg, #5e6eff 100%, #4bcdff 0%);
+  color: #fff;
+  cursor: pointer;
+  width: 213px;
+  height: 56px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 56px;
+  border-radius: 36px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+
+  &:hover {
+    background: linear-gradient(90deg, #5e6eff 0%, #4bcdff 105.41%);
+    box-shadow: 8px 8px 117px 0.5px #e0dfe5;
+  }
+}

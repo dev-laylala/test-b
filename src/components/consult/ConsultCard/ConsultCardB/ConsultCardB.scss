@@ -1,0 +1,93 @@
+.consult-card#type-b {
+  // padding-top: 72px;
+  background: #eef8fd;
+
+  width: 530px;
+  // height: 569px;
+  padding: 56px 24px 24px;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    // padding-top: 20px;
+    padding: 22px 18px 30px;
+    width: auto;
+    // height: 512px;
+    height: auto;
+  }
+}
+
+.consult-card#type-b .card-image-wrapper {
+  height: 160px;
+  margin-bottom: 40px;
+  text-align: center;
+  @media (max-width: 1200px) {
+    height: 94px;
+    margin-bottom: 22px;
+  }
+}
+
+.consult-card#type-b .card-image {
+  // width: 356px;
+  height: 100%;
+  @media (max-width: 1200px) {
+    // width: 246px;
+  }
+}
+
+.consult-card#type-b .card-title {
+  color: #2dbcff;
+}
+
+.consult-card#type-b .card-desc {
+  color: #80b8d0;
+  word-break: break-all;
+  text-align: center;
+}
+
+.consult-card#type-b .ps {
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.consult-card#type-b .card-sub-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 44px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 6px;
+  }
+}
+
+.consult-card#type-b .card-sub small {
+  color: #2dbcff;
+}
+
+.consult-card#type-b .card-bottom {
+  display: flex;
+  width: 482px;
+  padding: 33px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 20px;
+  background: #2dbcff;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 290px;
+  }
+}
+
+.consult-card#type-b .card-sub:last-child .row span {
+  width: 72px;
+}

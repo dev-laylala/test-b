@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import-normalize;
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-ExtraBold.woff2");
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gradient {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+div {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    overflow: hidden;
+  }
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 128px 0;
+
+  @media (max-width: 1200px) {
+    max-width: 355px;
+    padding: 56px 0;
+  }
+}
+
+/* Section Header */
+.section .section-header {
+  // display: flex;
+  // flex-direction: column;
+  text-align: left;
+  // gap: 16px;
+  // margin-bottom: 42px;
+
+  &.sticky {
+    position: sticky;
+    top: 150px;
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: 32px !important;
+    // position: static !important;
+    // gap: 12px;
+  }
+}
+
+.section .section-header .section-header-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #949ca8;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: -0.88px;
+  margin-bottom: 8px;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+.section-header-top img {
+  width: 30px;
+
+  @media (max-width: 1200px) {
+    width: 24px;
+  }
+}
+
+.section-header-top svg {
+  width: 34px;
+  height: 34px;
+
+  @media (max-width: 1200px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.section .section-header .section-header-icon {
+  width: 24px;
+}
+
+.section .section-header .section-header-title {
+  color: #454f5d;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.88px;
+  line-height: 60px;
+  margin-bottom: 24px;
+
+  @media (max-width: 1200px) {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.8px;
+    white-space: normal;
+    margin-bottom: 12px;
+  }
+}
+
+.section .section-header .section-header-sub {
+  color: #838a9a;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+  }
+}

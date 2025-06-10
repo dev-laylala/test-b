@@ -1,0 +1,301 @@
+.consult-card {
+  width: 530px;
+  display: flex;
+  // flex: 0 0 auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  padding: 26px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+    padding: 22px;
+  }
+}
+
+.consult-card .close-button {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all ease 0.2s;
+
+  &:hover {
+    background-color: rgba(69, 79, 93, 0.1);
+
+    svg rect {
+      fill: #454f5d;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+// .consult-card .card-image {
+//   padding-top: 15px;
+//   margin-bottom: 40px;
+//   margin: 0 auto;
+//   margin-bottom: 40px;
+
+//   @media (max-width: 1200px) {
+//     margin-bottom: 24px;
+//     padding: 0;
+//   }
+// }
+
+.consult-card .card-main {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.7px;
+  text-align: left;
+  margin-bottom: 33px;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
+  }
+}
+
+.consult-card .card-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.consult-card .card-sub small {
+  color: #5b7cff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.6px;
+
+  @media (max-width: 1200px) {
+    // margin-bottom: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.8px;
+  }
+}
+
+.consult-card .card-sub .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+
+  @media (max-width: 1200px) {
+    margin-top: 0px;
+  }
+}
+
+.consult-card .card-sub .row p {
+  color: #454f5d;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 37.181px;
+
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 0px;
+  }
+}
+
+.consult-card .card-sub .row p strong {
+  color: #454f5d;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 37px; /* 127.586% */
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+}
+
+.dc-badge {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  background: #15151d;
+
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.6px;
+
+  margin-top: 14px;
+  margin-bottom: 44px;
+
+  @media (max-width: 1200px) {
+    font-size: 13px;
+    // line-height: 20px;
+    display: flex;
+    padding: 6px 10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+}
+
+.dc-badge-b {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  background: #15151d;
+
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.6px;
+
+  margin-top: 14px;
+
+  @media (max-width: 1200px) {
+    font-size: 13px;
+    // line-height: 20px;
+    display: flex;
+    padding: 6px 10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.consult-card .card-sub label {
+  color: #b0b7c7;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 17px */
+
+  & > span {
+    text-decoration: line-through;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 15px;
+    line-height: 12px;
+    margin-top: 0;
+  }
+}
+
+.consult-card .card-bottom {
+  display: flex;
+  width: 482px;
+  padding: 33px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: #5b7cff;
+
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 24px */
+
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    // padding: 15px 0;
+    font-size: 18px;
+    width: 290px;
+    height: 55px;
+  }
+}
+
+.card-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.card-title-divider {
+  height: 2px;
+  flex: 1 0 0;
+  background: #5b7cff;
+}
+
+.card-title-divider-B {
+  height: 2px;
+  flex: 1 0 0;
+  background: #2dbcff;
+}
+
+.card-desc-bold {
+  color: #454f5d;
+  font-feature-settings: "liga" off, "clig" off;
+
+  /* semi title */
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.875px;
+
+  @media (max-width: 1200px) {
+    color: #454f5d;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.8px;
+  }
+}
